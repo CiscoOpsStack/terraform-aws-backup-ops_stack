@@ -27,7 +27,7 @@ resource "aws_backup_plan" "default-policy-backup-plan" {
 resource "aws_backup_selection" "default-policy-backup-selection" {
 
   iam_role_arn = aws_iam_role.backup-iam-role.arn
-  name         = "${var.resource_prefix}-default-policy-backup-selection"
+  name         = "${var.resource_prefix}-def-policy-backup-selection"
   plan_id      = aws_backup_plan.default-policy-backup-plan.id
 
   # You can also select resources by their ARNS -- refer to https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/backup_selection
